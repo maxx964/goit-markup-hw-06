@@ -1,0 +1,730 @@
+:root {
+    --main-light-color: #FFFFFF;
+    --main-font-color: #434455;
+    --secondory-font-color: #2E2F42;
+    --secondory-footer-color: #F4F4FD;
+    --secondory-font-accent-color: #4D5AE5;
+    --bgr-color-icon: #F4F4FD;
+    --btn-hero-color-hover: #404bbf;
+    --header-color-hover: #404bbf;
+    --light-slate: #8E8F99;
+    --green-color: #31D0AA;
+
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: var(--main-light-color);
+    color: var(--main-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.container {
+    /* outline: 1px solid green; */
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* центрування блокових єлементів за допомогою автоматичного
+    марджину margin: 0 auto; який відносно розміру блоказадає йому відступи
+     з ліва і права тим самим центруючи його посередирі  */
+    margin: 0 auto;
+}
+
+
+.link {
+    text-decoration: none;
+    /*  посиланням (a) добавлено значення щоб прибирати підкрєслювання яке встановлене
+    за замовчуванням */
+
+    color: currentColor;
+    /* currentColor дає змогу унаслідовання кольорів шрифту 
+    від встановленого в (body)
+     перебиває значення кольору яке виставленно при зомовчувані браузером */
+}
+
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* списку (ul) добавлено значення щоб прибирати крапки padding i margin */
+}
+
+img {
+    display: block;
+    /* потрібне встановленя для скидання кусочка 
+    проміжка в 4px місця яке браузер встановлює за замовчуванням
+    щоб елементи не злипалися */
+}
+
+.visually-hidden {
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+    position: absolute;
+    /* для приховання логічного зоголовка застосовуемо .visually-hidden */
+}
+
+/*  СЕКЦІЯ HEADER умовно шапка сайту*/
+
+.container-header {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    /* елементам (а) добавлений падинг в гору та низ для кращого наведення мишкою
+    в режимі cursor таким чином 
+    ми одразу задаємо і потрібну висоту нашому header */
+}
+
+
+
+/* скидання крайньої геометрії тобто марджину за допомогою :not(:last-child) у останьої дити в списку у
+всіх що перед ним марджин залишається (!крайній марджин прибираємо ЗАВЖДИ!) */
+/* 
+.list-nav>.item:not(:last-child),
+.list-address>.item:not(:last-child) {
+    margin-right: 40px; */
+
+
+.header-logo {
+    color: var(--secondory-font-color);
+    /* логотипу добавленний селекто span з класом header-logo для стилізації частини тексту */
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.list-nav {
+    display: flex;
+    gap: 40px;
+
+}
+
+.logotyp {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--secondory-font-accent-color);
+    text-decoration: none;
+    /* додали правий марджин логотипу  */
+    margin-right: 76px;
+}
+
+
+.header-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--header-color-hover);
+}
+
+.header-contact:hover,
+.header-contact:focus {
+    color: var(--header-color-hover);
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 48px;
+    height: 4px;
+    background: #404BBF;
+    border-radius: 2px;
+    display: block;
+}
+
+
+.header-contact {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    /* добавлений падинг в горі та в низу елемента для кращого наведення мишкою 
+    для режиму cursor  */
+}
+
+
+.address {
+    font-style: normal;
+    /* змінює у посилань (а) синій наклоний шрифт на стандартний вказаний */
+}
+
+.address-contact {
+    margin-left: auto;
+}
+
+.list-nav-address {
+    display: flex;
+    gap: 40px;
+
+}
+
+
+
+
+.header-contact {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+}
+
+
+/* ГОЛОВНА СЕКЦІЯ  HERO */
+
+.hero-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
+
+    text-align: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/hero/hero-img.jpg), url(../images/hero/dark-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* розмір секціям ми задаемо через padding якщо наприклад в секції є
+заголовок то відступ в данному випадку рахуються зверху від заголовка 188px 
+і від низу заголовка теж 188px */
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero-img.jpg);
+}
+
+
+
+
+.title-hero {
+    max-width: 496px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--main-light-color);
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 48px;
+    /* відступи між елементами робимо через (MARGIN)
+    в данному випадку це заголовок відступ у низ до кнопки margin-bottom: 48px;*/
+}
+
+
+/* button {
+     height: 56px;
+    display: block;
+    min-width: 170px;
+    cursor: pointer;
+    margin: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px 32px; */
+/* В СТРОЧНИХ ЄЛЕМЕНТІВ НЕМАЄ ПАРАМЕТРІВ ВЕРХНІХ НИЖНІХ МАРДЖЕНІВ  якщо потрібно
+    задати їм висоти чи ширини робимо з них блочно-сточні задаємо display-inline:block чи
+    просто   display: block; 
+
+    КУБИК!!!!!!!!! */
+/* transition-property: baground-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+.btn-hero {
+    padding: 16px 32px;
+
+    height: 56px;
+    min-width: 170px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.04em;
+    color: var(--bgr-color-icon);
+    background-color: #4D5AE5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    /* ТАКОЖ КНОПКИ НЕ УНАСЛІДУЮТЬ параметри від батьків тому ім задаємо це окремо */
+    /* КУБИК!!!!!!!!! */
+    transition-property: baground-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.btn-hero:hover,
+.btn-hero:focus {
+    background-color: #404BBF;
+
+}
+
+/* СЕКЦІЯ ПЕРЕВАГИ */
+
+.section-advantages {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--main-light-color);
+}
+
+.list-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    margin-left: -24px;
+
+}
+
+.item-advantages {
+    flex-basis: calc(100% / 4 - 24px);
+    margin-left: 24px;
+    /* width: calc((100% - 3 * 24px) / 4); */
+}
+
+.icon-advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 112px;
+    margin-bottom: 8px;
+    background-size: 264px;
+    background: #F4F4FD;
+    border-radius: 4px;
+}
+
+/* 
+.item-punctuality::before {
+    background-image: url(../css/bgr-img-hero/clock.png);
+}
+
+.item-deligenc::before {
+    background-image: url(../css/bgr-img-hero/diagram.png); 
+}
+
+.item-technologies::before {
+    background-image: url(../css/bgr-img-hero/astronaut.png);
+} */
+
+.title-advantages {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.subtitle-team {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+}
+
+.text {
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+}
+
+.text-team {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-font-color);
+}
+
+
+
+
+
+/* стилі співпадають тому пишемо два класи разом через кому щоб
+не дублювати лишній код */
+.title-doing,
+.title-team {
+    margin-bottom: 72px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--secondory-font-color);
+
+}
+
+
+
+.section-whatdoing {
+    padding-bottom: 120px;
+    background-color: var(--main-light-color);
+}
+
+/* клас ul в секції what are doing */
+.list-whatdoing {
+    gap: 24px;
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+
+
+.item-whatdoing {
+    width: calc ((100% - 3 * 24px) / 4);
+}
+
+
+.section-ourteam {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #F4F4FD;
+
+    /* margin: 0 auto в секції не може бути марджину бо то найбільша  секція ;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    значення не вірні бо не вірний макет*/
+}
+
+/* це клас нашого ul в секції our tean */
+.list-ourteam {
+    display: flex;
+    text-align: center;
+    gap: 24px;
+    /* justify-content: space-between;можно і такий варіант
+    щоб розсунути колонки */
+}
+
+.item-team {
+    width: 264px;
+    /* height: 380px; висоту майже ніколи не задаємо*/
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.div-team {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.list-social {
+    justify-content: center;
+    display: flex;
+    gap: 24px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    color: var(--main-light-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--header-color-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.team-social-icons {
+    fill: var(--secondory-footer-color);
+}
+
+.section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+}
+
+
+
+.customer-titel {
+    margin-bottom: 72px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondory-font-color);
+}
+
+.customers-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+
+}
+
+/* margin-left: -24px;
+}
+
+.customers-list>.item-customers {
+    flex-basis: calc(100% / 6 - 24px);
+    margin-left: 24px;
+} */
+
+.item-customers {
+    width: calc((100% - 120px) / 6);
+}
+
+.customer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 168px;
+    height: 88px;
+    padding: 16px 32px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    color: var(--light-slate);
+    /* КУБИК!!!!!!!!! */
+    transition-property: backgroud-color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.customer-link:hover,
+.customer-link:focus {
+    color: var(--btn-hero-color-hover);
+    border: 1px solid var(--btn-hero-color-hover);
+}
+
+
+
+
+.icon-customers {
+    fill: currentColor;
+}
+
+
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--secondory-font-color);
+}
+
+.footer-logo {
+    color: #f4f4fd;
+}
+
+.list-footer {
+    padding-top: 100px;
+    margin: 0;
+}
+
+
+
+.text-footer {
+    font-size: 500px;
+    max-width: 264px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--secondory-footer-color);
+}
+
+.logotyp-footer {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--secondory-font-accent-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+
+
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
+}
+
+.text-social-media {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-light-color);
+}
+
+.list-footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondory-font-accent-color);
+    color: var(--main-light-color);
+    /* КУБИК!!!!!!!!! */
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--green-color);
+}
+
+.footer-icon {
+    fill: var(--bgr-color-icon);
+}
+
+
+/* .backdrop ЦЕ ЗАТЕМНЕНЯ ЄКРАНУ ПРИ ПОЯВІ МОДАЛЬНОГО фіксуемо його за допомогою  position: fixed;\
+далі параметри фону і ширина з висотою  */
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    /* is-hidden візуально приховує нашу модалку */
+
+    /* opacity робить прозорим нашу модалку */
+    opacity: 0;
+
+
+    /* visibility: hidden; */
+
+    /* робить наш .backdrop пропускним для кліка мишкою бо по замовчуванні він перекриває доступ 
+    єкран  */
+    pointer-events: none;
+}
+
+/* .modal ЦЕ НАШЕ МОДАЛЬНЕ ВІКНО position: absolute; привязує його появу в області розмірів самого-backdrop
+далі параметри появизавжди позиціонує по верхному лівому куті
+тобто щоб на прямокутник був по середені за допомогою-transform: translate(-50%, -50%);
+нібити перекидуємо половину  */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 408px;
+    min-height: 576px;
+
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /* transition-property: opasity;
+    transition-duration: 1000ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.icon-modal-btn {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: 24px;
+    margin-right: 24px;
+    margin-left: auto;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
