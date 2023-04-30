@@ -13,12 +13,6 @@
 
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    color: var(--main-light-color);
-    color: var(--main-font-color);
-}
 
 h1,
 h2,
@@ -29,24 +23,6 @@ h6,
 p {
     margin: 0;
 }
-
-
-.header {
-    border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.container {
-    /* outline: 1px solid green; */
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    /* центрування блокових єлементів за допомогою автоматичного
-    марджину margin: 0 auto; який відносно розміру блоказадає йому відступи
-     з ліва і права тим самим центруючи його посередирі  */
-    margin: 0 auto;
-}
-
 
 .link {
     text-decoration: none;
@@ -73,6 +49,35 @@ img {
     проміжка в 4px місця яке браузер встановлює за замовчуванням
     щоб елементи не злипалися */
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: var(--main-light-color);
+    color: var(--main-font-color);
+}
+
+
+
+
+
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.container {
+    /* outline: 1px solid green; */
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* центрування блокових єлементів за допомогою автоматичного
+    марджину margin: 0 auto; який відносно розміру блоказадає йому відступи
+     з ліва і права тим самим центруючи його посередирі  */
+    margin: 0 auto;
+}
+
 
 .visually-hidden {
     height: 1px;
@@ -282,14 +287,14 @@ img {
 } */
 
 .btn-hero {
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
 
     height: 56px;
     min-width: 170px;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
+    /* text-align: center; */
+    /* font-family: "Roboto", sans-serif; */
     font-weight: 500;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--bgr-color-icon);
@@ -593,6 +598,7 @@ img {
 
 
 .text-footer {
+    margin-right: 120px;
     font-size: 500px;
     max-width: 264px;
     font-size: 16px;
@@ -619,7 +625,7 @@ img {
 .footer-container {
     display: flex;
     align-items: baseline;
-    gap: 120px;
+
 }
 
 .text-social-media {
@@ -661,6 +667,82 @@ img {
 .footer-icon {
     fill: var(--bgr-color-icon);
 }
+
+.wrapper-footer-form {
+    margin-left: 80px;
+
+
+}
+
+.footer-modal-text {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-light-color);
+}
+
+.footer-form-input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+
+    width: 264px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    background: transparent;
+    cursor: pointer;
+}
+
+::placeholder {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--main-light-color);
+}
+
+.footer-form-btn {
+    position: relative;
+
+    padding: 8px 24px;
+    margin-left: 24px;
+    width: 164px;
+
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: start;
+
+
+    color: var(--main-light-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: var(--secondory-font-accent-color);
+    border-radius: 4px;
+    border: none;
+    transition-property: baground-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: var(--header-color-hover);
+}
+
+.icon-form {
+    position: absolute;
+    bottom: 10px;
+    right: 24px;
+}
+
+
 
 
 /* .backdrop ЦЕ ЗАТЕМНЕНЯ ЄКРАНУ ПРИ ПОЯВІ МОДАЛЬНОГО фіксуемо його за допомогою  position: fixed;\
@@ -803,21 +885,23 @@ img {
 
 /* ІКОНКА ПЕРША ДРУГА І ТРЕТЯ ІМЯ, ТЕЛЕФОН, ПОЧТА І ПОЗИЦІЮВАННЯ З ПРІВЯЗКОЮ ДО СПАНА */
 
-.span-modal-name {
-    display: block;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: var(--light-slate);
-    margin-bottom: 4px;
-}
-
 
 /* ЛЕЙБЕЛ ЙГО ПАРАМЕТРИ + ЗНАЧЕННЯ ФОКУСУ НА ЗМІНУ  КОЛЬОРУ РАМКИ І НА ЗМІНУ ІКОНКИ */
 .modal-form-field {
     margin-bottom: 8px;
     width: 100%;
     height: 58px;
+
+}
+
+
+.modal-name {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+    margin-bottom: 4px;
 
 }
 
@@ -842,6 +926,17 @@ img {
 .modal-form-input:focus+.icon-user-name {
     fill: var(--secondory-font-accent-color);
 }
+
+
+/* приклад з перевіркою :placeholder-shown):required:invalid*/
+/* .modal-form-input:not(:placeholder-shown):invalid {
+    border-color: red;
+
+} */
+
+/* .modal-form-input:not(:placeholder-shown):required:valid {
+    border-color: blue;
+}  */
 
 /* ЛЕЙБЕЛ ЙГО ПАРАМЕТРИ+ЗНАЧЕННЯ ФОКУСУ НА ЗМІНУ КОЛЬОРУ РАМКИ І НА ЗМІНУ ІКОНКИ */
 
@@ -872,7 +967,6 @@ img {
 
 .modal-form-massage:focus {
     outline-color: var(--secondory-font-accent-color);
-
 }
 
 /* ПАРАМЕТРИ ДЛЯ ТЕКСТЕРІА */
@@ -894,16 +988,21 @@ img {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--light-slate);
+
 }
+
+
 
 /* СКИДАННЯ СТИЛІВ ЧЕКБОКСУ І НОВІ КАСТОМНІ ПАРАМЕТРИ */
 .modal-form-check {
 
-
+    /* скидання стандартних стилів */
     appearance: none;
+
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
     border-radius: 2px;
     cursor: pointer;
 
@@ -940,9 +1039,12 @@ img {
     background-size: 10px;
 }
 
+
 /* СКИДАННЯ СТИЛІВ ЧЕКБОКСУ І НОВІ КАСТОМНІ ПАРАМЕТРИ */
 
-
+/* .modal-form-check+.modal-form-check-desk {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} */
 
 .link-privacy-policy {
 
@@ -953,21 +1055,22 @@ img {
     color: var(--secondory-font-accent-color);
 }
 
+
 .modal-form-btn {
     padding: 16px 32px;
 
     align-self: center;
-    display: block;
+    /* display: block; */
     height: 56px;
     min-width: 170px;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
+    /* text-align: center; */
+    /* font-family: "Roboto", sans-serif; */
     font-weight: 500;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--bgr-color-icon);
-    background-color: #4D5AE5;
+    background-color: var(--secondory-font-accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
@@ -980,6 +1083,6 @@ img {
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-    background-color: #404BBF;
+    background-color: var(--header-color-hover);
 
 }
